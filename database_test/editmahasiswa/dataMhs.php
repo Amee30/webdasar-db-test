@@ -42,18 +42,18 @@
     ?>
 </table>
 <br>
-<form action="loginID2.php">
+<form action="loginID2.html">
     <div class="button">
         <button type="submit" class="btn btn-primary mb-3">Tambah Mahasiswa</button>
     </div>
 </form>
     <div class="dataMhsButton">
-    <form action="loginID3.php">
+    <form action="loginID3.html">
             <button type="submit" class="btn btn-primary mb-3">Hapus Mahasiswa</button>
     </form>
     </div>
     <div class="dataMhsButton2">
-        <form action="loginID.php">
+        <form action="loginID.html">
             <button type="submit" class="btn btn-primary mb-3">Edit Mahasiswa</button>
         </form>
     </div>
