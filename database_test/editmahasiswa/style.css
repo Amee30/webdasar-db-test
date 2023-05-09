@@ -1,0 +1,28 @@
+.dataMhsButton {
+    position: fixed;
+    margin-left: 385px;
+    margin-top: -69px;
+}
+
+.dataMhsButton2 {
+    position: fixed;
+    margin-left: 205px;
+    margin-top: -69px;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu1{
+    width: 400px;
+    height: min-content;
+    text-align: center;
+    padding: 20px;
+    border-radius: 12px;
+    font-weight: bold;
+    justify-items: center;
+}
