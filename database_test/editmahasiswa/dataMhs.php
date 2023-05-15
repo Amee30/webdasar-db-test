@@ -14,8 +14,16 @@
     <title>Data Mahasiswa</title>
 </head>
 <body>
+<?php
+session_start();
+global $getUser;
+if (!isset($_SESSION['usertb'])) {
+    header("location:../editMahasiswa/loginID.php");
+}
+?>
 <div class="container">
 <h2>Table Data Mahasiswa</h2>
+    <h3>User : <?php echo $_SESSION['usertb'] ?></h3>
 <table class="table">
     <tr>
         <td>No</td>
@@ -42,19 +50,24 @@
     ?>
 </table>
 <br>
-<form action="loginID2.html">
+<form action="addMahasiswa.html">
     <div class="button">
         <button type="submit" class="btn btn-primary mb-3">Tambah Mahasiswa</button>
     </div>
 </form>
     <div class="dataMhsButton">
-    <form action="loginID3.html">
+    <form action="remMahasiswa.html">
             <button type="submit" class="btn btn-primary mb-3">Hapus Mahasiswa</button>
     </form>
     </div>
     <div class="dataMhsButton2">
-        <form action="loginID.html">
+        <form action="editMahasiswaMenu.html">
             <button type="submit" class="btn btn-primary mb-3">Edit Mahasiswa</button>
+        </form>
+    </div>
+    <div class="dataMhsButton3">
+        <form action="../editAksi/logoutAksi.php">
+            <button type="submit" class="btn btn-primary mb-3">Log Out</button>
         </form>
     </div>
 </div>

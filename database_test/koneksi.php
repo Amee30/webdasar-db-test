@@ -11,7 +11,7 @@
         $db_host = "localhost";
         $db_user = "root";
         $db_pass = "";
-        $db_name = ""; <!-- Db name Sesuaikan dengan nama Db anda miliki -->
+        $db_name = "akademik";
 
         $koneksi = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
 

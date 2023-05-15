@@ -16,23 +16,28 @@
     <h2>Admin Login</h2>
     <p>Silahkan Masukan Password</p>
     <p><strong> Hanya Admin Yang Dapat Akses </strong></p>
-    Password : <input type="password" required id="pass1">
-    <button type="submit" class="btn btn-primary mb-3" onclick="auth()">Log In</button>
-    <script>
-        function auth(){
-            const password = document.getElementById("pass1").value;
-            if (password === "2004") {
-                location.href = 'editMahasiswaMenu.php';
-                alert("Login Succeed");
-            }else {
-                alert("Invalid Password")
-                return false;
-            }
-        }
-    </script>
-    <form action="dataMhs.php">
-        <button type="submit" class="btn btn-primary mb-3">Balik Ke Menu</button>
+    <form method="post" action="../editAksi/aksiLogin.php">
+        Username : <input type="text" required name="user">
+        <br>
+        Password : <input type="password" required name="pass">
+        <br> <br>
+        <button type="submit" class="btn btn-primary mb-3">Log In</button>
     </form>
 </div>
+<?php
+if (isset($_GET['pesan'])) {
+    if ($_GET['pesan']== 'berhasil') {
+        header("location:../editmahasiswa/dataMhs.php");
+
+    }elseif ($_GET['pesan']=='gagal'){
+        ?>
+        <script>
+            alert("Username/Password Salah");
+            location.href = "loginID.php";
+        </script>
+    <?php
+    }
+}
+    ?>
 </body>
 </html>
